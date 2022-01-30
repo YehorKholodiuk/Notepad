@@ -1,23 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Header from "./Header";
+import Container from "./contacts/Container";
+import'bootstrap/dist/css/bootstrap.css'
 function App() {
+  const appName = 'Assistant';
+  const contactsBlockName = 'Contacts List';
+  const contacts = [{
+    id: 1,
+    name:'John Smith',
+    tel: '333-444-555'
+  },
+    {
+      id: 12,
+      name:'John Smith',
+      tel: '333-444-5895'
+    },
+
+    {
+      id: 11,
+      name:'John Smith',
+      tel: '333-444-555'
+    },
+
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+  <Header appName={appName}/>
+      <Container
+          contactsBlockName={contactsBlockName}
+      contacts={contacts}/>
+
     </div>
   );
 }
