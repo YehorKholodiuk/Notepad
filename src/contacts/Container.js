@@ -5,9 +5,9 @@ import Contact from "./Contact";
 import Buttons from "./Buttons";
 
 const Container = (props) => {
-    return(<div>
+    return(<div  className='container'>
         <Subheader blockName={props.contactsBlockName}/>
-        <AddingForm/>
+        <AddingForm placeHolder={props.placeHolderContact}/>
         <ol>
             {props.contacts.map(el => <Contact contact={el}/>)}
         </ol>

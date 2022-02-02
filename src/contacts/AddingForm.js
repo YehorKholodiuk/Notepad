@@ -1,13 +1,14 @@
 import React from "react";
 
 const AddingForm = (props) =>{
-const AddButtonHandler = () => {
+const addButtonHandler = () => {
     console.log('Add Button')
 }
 
-    return (<div>
- <input type='text'  placeholder='contact name'/>
-        <button onClick={AddButtonHandler}>Add</button>
+    return (
+        <div>
+ <input type='text'  placeholder={props.placeHolder}/>
+        <button onClick={addButtonHandler}>Add</button>
     </div>)
 }
 export default AddingForm;
