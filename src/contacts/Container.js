@@ -6,7 +6,7 @@ import Buttons from "./Buttons";
 
 const Container = (props) => {
     return(<div>
-        <Subheader contactsBlockName={props.contactsBlockName}/>
+        <Subheader blockName={props.contactsBlockName}/>
         <AddingForm/>
         <ol>
             {props.contacts.map(el => <Contact contact={el}/>)}

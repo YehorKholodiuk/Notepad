@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./Header";
 import Container from "./contacts/Container";
 import'bootstrap/dist/css/bootstrap.css'
+import ToDoContainer from "./toDoList/ToDoContainer";
 function App() {
   const appName = 'Assistant';
   const contactsBlockName = 'Contacts List';
@@ -24,13 +25,35 @@ function App() {
     },
 
   ]
+  const toDoListBlockName = 'To do List';
+  const toDoList = [{
+    id: 16,
+    name:'Shopping',
+
+  },
+    {
+      id: 123,
+      name:'Lunch',
+
+    },
+
+    {
+      id: 116,
+      name:'Movie',
+
+    },
+
+  ]
   return (
     <div >
   <Header appName={appName}/>
       <Container
           contactsBlockName={contactsBlockName}
       contacts={contacts}/>
-
+<ToDoContainer
+toDoListBlockName={toDoListBlockName}
+toDoList={toDoList}
+/>
     </div>
   );
 }
