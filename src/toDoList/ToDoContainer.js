@@ -11,6 +11,7 @@ const ToDoContainer = (props) => {
             <ol>
             {props.toDoList.map(el => <ToDo toDoList={el}/>)}
         </ol>
+
             <Buttons buttonName='All tasks'/>
         </div>
     )

@@ -3,6 +3,8 @@ import Buttons from "./Buttons";
 
 const Contact = (props) =>{
     console.log(props)
+
+
     return(
         <li>
             {props.contact.name}
